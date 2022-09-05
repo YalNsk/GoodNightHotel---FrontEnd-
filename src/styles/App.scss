@@ -1,0 +1,9 @@
+@import'./settings';
+@import'../components/navigation/nav';
+
+
+.App{
+    background: $white;
+    width: 100vw;
+    height: 150vh;
+}
