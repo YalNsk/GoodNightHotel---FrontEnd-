@@ -4,4 +4,25 @@
   background: $color2;
   color: white;
   font-family: $RobotoBlack;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 30px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.51);
+  .containerButton {
+    display: flex;
+    align-items: center;
+  }
+  button {
+    // display: block;
+    height: 30px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    background: $color1;
+    color: $white;
+  }
 }
