@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SelectBar = () => {
+const SelectBar = (props) => {
   const [choicePays, setchoicePays] = useState();
 
   let paysSelection = (e) => {

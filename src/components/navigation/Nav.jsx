@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import SelectBar from "../SelectBar/SelectBar";
+import logo from "../../assets/img/GoodNightHotel.png";
 
 const Nav = () => {
   return (
     <div className="navi">
       <NavLink className="logo" to="/">
-        <h1>Logo</h1>
+        <img src={logo} alt="" />
       </NavLink>
 
       <ul className="pages">

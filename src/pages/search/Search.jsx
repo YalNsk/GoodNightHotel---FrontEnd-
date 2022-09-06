@@ -6,7 +6,7 @@ const Search = (props) => {
   return (
     <div>
       <Nav />
-      <h1>Choix du pays</h1>
+      <h1>{choicePays}</h1>
     </div>
   );
 };
