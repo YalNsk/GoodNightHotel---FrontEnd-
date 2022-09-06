@@ -20,7 +20,9 @@
   .pages {
     display: flex;
     flex-direction: row;
-    width: 30%;
+    width: 35%;
+    margin-top: 10px;
+    margin-left: 80px;
     justify-content: space-between;
     li {
       display: flex;
