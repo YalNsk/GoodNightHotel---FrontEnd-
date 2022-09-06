@@ -1,6 +1,9 @@
 @import "./settings";
 @import "../components/navigation/nav";
 @import "../components/SearchBar/search.scss";
+@import "../pages/home/home";
+@import "../components/SelectBar/selectBar.scss";
+@import "../pages/search/search.scss";
 
 .App {
   background: $white;

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Reservation from "./pages/reservation/Reservation";
 import Admin from "./pages/admin/Admin";
 import Home from "./pages/home/Home";
+import Search from "./pages/search/Search.jsx";
 import LoginRegister from "./pages/connexion-inscription/LoginRegister";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/loginRegister" element={<LoginRegister />} />
         <Route path="/reservation" element={<Reservation />} />
         <Route path="/*" element={<Home />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </BrowserRouter>
   );

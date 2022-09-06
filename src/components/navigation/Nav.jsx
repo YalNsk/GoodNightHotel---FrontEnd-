@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import SearchBar from "../SearchBar/SearchBar";
+import SelectBar from "../SelectBar/SelectBar";
 
 const Nav = () => {
   return (
@@ -30,9 +30,16 @@ const Nav = () => {
         >
           <li>Réservation</li>
         </NavLink>
+        <NavLink
+          className={(nav) => (nav.isActive ? "active" : "")}
+          to="/search"
+        >
+          <li>Recherche</li>
+        </NavLink>
       </ul>
+      <SelectBar />
 
-      <SearchBar placeholder="Recherche pays" />
+      {/* <SearchBar placeholder="Recherche pays" /> */}
 
       {/* <div className="containerButton">
         <button type="button">S'inscrire</button>
