@@ -1,0 +1,23 @@
+.recherche {
+  width: 30%;
+}
+
+button {
+  // display: block;
+  height: 30px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  background: $color1;
+  color: $white;
+  cursor: pointer;
+  font-family: $RobotoBlack;
+  text-transform: uppercase;
+}
+input {
+  padding: 7px;
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 80%;
+}
