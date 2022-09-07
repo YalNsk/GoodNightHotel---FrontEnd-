@@ -1,17 +1,24 @@
-import { useState } from "react";
-// import axios from "axios";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Pays = () => {
-  //   const [data, setdata] = useState([]);
-  const [selectedRadio, setselectedRadio] = useState();
+  const [data, setdata] = useState([]);
+  const [currentPage, setcurrentPage] = useState();
+  const [selectedRadio, setselectedRadio] = useState(0);
 
   const radios = ["Italie", "France", "Espagne", "Portugal", "Suisse"];
   console.log(selectedRadio);
 
-  //appel à l'api
-  //   useEffect(() => {
-  //     axios.get("").then((res) => setdata(res.data));
-  //   }, []);
+  //   const url = "https://api.thecatapi.com/v1/images/search?limit=9";
+  const url =
+    "https://api.thecatapi.com/v1/images/search?limit=9&breed_ids=beng&api_key=live_UIPyUr8ihcOxA4mjkzGFRyD7qitvWaUzQh6vqc8MS6H7MWjo44cdMmw74pUCRCAu'";
+
+  //   appel à l'api
+  useEffect(() => {
+    axios.get(url).then((res) => setdata(res.data));
+  }, []);
+
+  console.log(data[0]);
 
   return (
     <div className="lesPays">
@@ -30,13 +37,19 @@ const Pays = () => {
         ))}
       </ul>
 
-      {/* <ul>
+      <ul className="containerChats">
         {data
-          .filter((element) => element.pays[0].includes(selectedRadio))
-          .map((pays, index) => (
-            <Card key={index} pays={pays} />
+          //   .filter((element) => element.pays[0].includes(selectedRadio))
+          .map((element, index) => (
+            <img
+              className="pictureChat"
+              key={index}
+              //   style={{ height: "300px" }}
+              src={element.url}
+              alt="chat"
+            />
           ))}
-      </ul> */}
+      </ul>
       <div className="container-Card">{/* <Card /> */}</div>
     </div>
   );

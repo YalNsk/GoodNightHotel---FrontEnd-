@@ -1,8 +1,8 @@
-const Card = () => {
+const Card = ({ index, element }) => {
   return (
     <div className="card">
       <img src="" alt="" />
-      <h3>Nom de l'hôtel</h3>
+      <h3>test</h3>
     </div>
   );
 };
