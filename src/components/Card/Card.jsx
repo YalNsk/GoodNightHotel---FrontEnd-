@@ -1,4 +1,4 @@
-const Card = ({ index, element }) => {
+const Card = ({ props }) => {
   return (
     <div className="card">
       <img src="" alt="" />

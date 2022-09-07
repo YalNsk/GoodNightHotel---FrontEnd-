@@ -4,6 +4,7 @@
 @import "../pages/home/home";
 @import "../components/SelectBar/selectBar.scss";
 @import "../pages/search/search.scss";
+@import "../pages/connexion-inscription/loginRegister";
 @import "../components/pays/pays";
 @import "../components/Card/card";
 @import "../components/Criteres/criteresRecherche";
@@ -12,4 +13,9 @@
   background: $white;
   width: 100vw;
   height: 150vh;
+}
+
+h2 {
+  text-align: center;
+  margin: 15px;
 }

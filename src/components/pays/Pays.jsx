@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Card from "../Card/Card";
 
 const Pays = () => {
   const [data, setdata] = useState([]);
-  const [currentPage, setcurrentPage] = useState();
   const [selectedRadio, setselectedRadio] = useState(0);
 
   const radios = ["Italie", "France", "Espagne", "Portugal", "Suisse"];
   console.log(selectedRadio);
 
   //   const url = "https://api.thecatapi.com/v1/images/search?limit=9";
-  const url =
-    "https://api.thecatapi.com/v1/images/search?limit=9&breed_ids=beng&api_key=live_UIPyUr8ihcOxA4mjkzGFRyD7qitvWaUzQh6vqc8MS6H7MWjo44cdMmw74pUCRCAu'";
+  const url = "http://localhost:8580/api/hotel/";
 
   //   appel à l'api
   useEffect(() => {
@@ -41,13 +40,11 @@ const Pays = () => {
         {data
           //   .filter((element) => element.pays[0].includes(selectedRadio))
           .map((element, index) => (
-            <img
-              className="pictureChat"
-              key={index}
-              //   style={{ height: "300px" }}
-              src={element.url}
-              alt="chat"
-            />
+            <>
+              <Card />
+              <h2>{element.adresse.country}</h2>
+              <p>{element.name}</p>
+            </>
           ))}
       </ul>
       <div className="container-Card">{/* <Card /> */}</div>
