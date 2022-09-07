@@ -1,11 +1,13 @@
 import React from "react";
+import FormRegister from "../../components/formRegister/FormRegister";
 import Nav from "../../components/navigation/Nav";
 
 const LoginRegister = () => {
   return (
     <div>
-      <Nav />
-      <h2>page Login/Register</h2>
+      <Nav cla/>
+      <h2>Inscription</h2>
+      <FormRegister />
     </div>
   );
 };

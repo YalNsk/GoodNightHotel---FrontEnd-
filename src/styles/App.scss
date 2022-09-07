@@ -4,9 +4,15 @@
 @import "../pages/home/home";
 @import "../components/SelectBar/selectBar.scss";
 @import "../pages/search/search.scss";
+@import "../pages/connexion-inscription/loginRegister";
 
 .App {
   background: $white;
   width: 100vw;
   height: 150vh;
+}
+
+h2 {
+  text-align: center;
+  margin: 15px;
 }
