@@ -6,7 +6,19 @@ const Home = () => {
   return (
     <div>
       <Nav />
-      <img style={{ width: "100vw" }} src={Voyage4} alt="" />
+      <div className="accroche">
+        <h3 className="desti">▸ 5 destinations</h3>
+        <h3 className="etoiles">
+          ▸ 5 étoiles <span>★★★★★</span>
+        </h3>
+        <h3 className="dev">▸ 5 développeurs Web</h3>
+      </div>
+      <img
+        className="photoFond"
+        style={{ width: "100vw" }}
+        src={Voyage4}
+        alt=""
+      />
     </div>
   );
 };

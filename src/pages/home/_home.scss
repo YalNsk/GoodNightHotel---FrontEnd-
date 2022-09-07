@@ -1,0 +1,54 @@
+.photoFond {
+  position: relative;
+}
+.accroche {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  h3 {
+    font-family: $RobotoBlack;
+    font-size: 5rem;
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.637);
+    position: relative;
+  }
+}
+span {
+  font-size: 2rem;
+  color: orange;
+  position: absolute;
+  top: -3px;
+  left: 240px;
+}
+
+.dev {
+  transform: translateX(-2000px);
+  animation: 4s ease-in-out 1s forwards slide;
+  @keyframes slide {
+    to {
+      transform: translateX(0px);
+    }
+  }
+}
+.desti {
+  transform: translateX(-2000px);
+
+  animation: 4s ease-out 2s forwards slide;
+  @keyframes slide {
+    to {
+      transform: translateX(0px);
+    }
+  }
+}
+.etoiles {
+  transform: translateX(2000px);
+
+  animation: 3s ease-in-out 3s forwards slide;
+  @keyframes slide {
+    to {
+      transform: translateX(0px);
+    }
+  }
+}

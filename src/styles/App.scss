@@ -5,6 +5,9 @@
 @import "../components/SelectBar/selectBar.scss";
 @import "../pages/search/search.scss";
 @import "../pages/connexion-inscription/loginRegister";
+@import "../components/pays/pays";
+@import "../components/Card/card";
+@import "../components/Criteres/criteresRecherche";
 
 .App {
   background: $white;
