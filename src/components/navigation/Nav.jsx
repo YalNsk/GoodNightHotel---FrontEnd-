@@ -1,14 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import SelectBar from "../SelectBar/SelectBar";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/img/GoodNightHotel.png";
 
 const Nav = () => {
   return (
     <div className="navi">
-      <NavLink className="logo" to="/">
+      <Link className="logo" to="/">
         <img src={logo} alt="" />
-      </NavLink>
+      </Link>
 
       <ul className="pages">
         <NavLink
@@ -38,7 +37,6 @@ const Nav = () => {
           <li>Recherche</li>
         </NavLink>
       </ul>
-      <SelectBar />
 
       {/* <SearchBar placeholder="Recherche pays" /> */}
 

@@ -4,6 +4,9 @@
 @import "../pages/home/home";
 @import "../components/SelectBar/selectBar.scss";
 @import "../pages/search/search.scss";
+@import "../components/pays/pays";
+@import "../components/Card/card";
+@import "../components/Criteres/criteresRecherche";
 
 .App {
   background: $white;
