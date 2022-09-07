@@ -7,11 +7,11 @@ const Home = () => {
     <div>
       <Nav />
       <div className="accroche">
-        <h3 className="desti">5 destinations</h3>
+        <h3 className="desti">▸ 5 destinations</h3>
         <h3 className="etoiles">
-          5 étoiles <span>★★★★★</span>
+          ▸ 5 étoiles <span>★★★★★</span>
         </h3>
-        <h3 className="dev">5 développeurs Web</h3>
+        <h3 className="dev">▸ 5 développeurs Web</h3>
       </div>
       <img
         className="photoFond"

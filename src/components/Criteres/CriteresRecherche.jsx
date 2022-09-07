@@ -1,12 +1,21 @@
 const CriteresRecherche = () => {
+  const confirmer = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
-      <form className="formSearch" action="submit">
+      <form
+        onSubmit={(e) => confirmer(e)}
+        className="formSearch"
+        action="submit"
+      >
         <div className="dates">
           <label htmlFor="dateDebut">Date de début de réservation :</label>
           <input type="date" name="dateDebut" id="dateDebut" />
           <label htmlFor="dateDebut">Date de fin de réservation :</label>
           <input type="date" name="dateFin" id="dateFin" />
+          <br />
+          <hr />
           <br />
 
           <div className="nbrePersonnes">
@@ -25,6 +34,8 @@ const CriteresRecherche = () => {
               <option value="3">3</option>
             </select>
             <br />
+            <hr />
+            <br />
 
             <div className="typeChambre">
               <label htmlFor="choixChambre">Type de chambre :</label>
@@ -38,6 +49,9 @@ const CriteresRecherche = () => {
             </div>
           </div>
         </div>
+        <button id="envoi" type="submit">
+          confirmation
+        </button>
       </form>
     </>
   );
