@@ -22,6 +22,8 @@ $color1: #f56a11;
 $color2: #2d3669;
 $color3: #8baecc;
 $color4: rgb(217, 217, 217);
+$color5: #b3d1ec;
+
 $white: #f1f1f1;
 
 li {
@@ -31,4 +33,9 @@ li {
 *:focus {
   outline: 0;
   border: none;
+}
+
+body {
+  background: $white;
+  height: 100vh;
 }

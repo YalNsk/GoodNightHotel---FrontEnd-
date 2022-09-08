@@ -1,45 +1,49 @@
 .formSearch {
   background: $color3;
-  width: 20%;
+  width: 100%;
   margin: 0 auto;
-  padding: 40px;
-  border-radius: 10px;
+  padding: 70px 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  height: 560px;
   font-family: $RobotoRegular;
-  input {
-    width: 100%;
-    margin-bottom: 10px;
-    border: none;
-    padding: 10px;
-  }
-  label {
-    margin-bottom: 3px;
-  }
 }
-.dates,
-.nbrePersonnes,
+label {
+  margin-bottom: 7px;
+}
+
+.adu,
+input,
+.debut,
+.fin,
+.enfants,
+.select,
+.confirmation,
 .typeChambre {
-  display: flex;
-  flex-direction: column;
-  .select {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-  }
-  //   padding: 10px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
 }
 
 #envoi {
-  width: 100%;
-  height: 50px;
-  font-size: 1.5rem;
-  color: $white;
-  transition: 0.3s ease;
+  padding: 23px;
+  font-size: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  line-height: 7px;
+  background: $color2;
   &:hover {
-    background: $color2;
+    background: $color1;
   }
+}
+
+.debut,
+.fin,
+.confirmation,
+.adu,
+.enfants,
+.room {
+  display: flex;
+  flex-direction: column;
 }
