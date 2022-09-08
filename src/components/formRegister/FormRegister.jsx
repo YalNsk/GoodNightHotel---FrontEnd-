@@ -1,4 +1,8 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { registerUser } from "../../redux/actions/authAction";
 
 const FormRegister = () => {
   const {
@@ -7,55 +11,77 @@ const FormRegister = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const isConnected = useSelector((state) => {
+    return state.auth.isConnected;
+  });
+
+  useEffect(() => {
+    if (isConnected) {
+      navigate("/search");
+    }
+  }, [isConnected]);
+
+  const onSubmit = (data) => {
+    dispatch(registerUser(data));
+    console.log(data);
     reset();
   };
 
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <div className="inputs">
-        <label htmlFor="email">Email : </label>
+        <label htmlFor="mail">Email : </label>
         <input
-          id="email"
-          type="email"
-          {...register("email", { required: true })}
+          id="mail"
+          type="mail"
+          {...register("mail", { required: true })}
         />
-        {errors.email && <p>Email incorrect</p>}
+        {errors.mail && <p>Email incorrect</p>}
       </div>
       <div className="inputs">
         <label htmlFor="firstname">Prénom : </label>
-        <input id="firstname" type="text" {...register("firstname")} />
+        <input
+          id="firstname"
+          type="text"
+          {...register("firstname", { required: true })}
+        />
       </div>
       <div className="inputs">
         <label htmlFor="lastname">Nom : </label>
-        <input id="lastname" type="text" {...register("lastname")} />
+        <input
+          id="lastname"
+          type="text"
+          {...register("lastname", { required: true })}
+        />
       </div>
       <div className="inputs">
         <label htmlFor="password">Mot de passe : </label>
         <input id="password" type="password" {...register("password")} />
       </div>
       <div className="inputs">
-        <label htmlFor="phonenumber">Numéro de téléphone : </label>
-        <input id="phonenumber" type="text" {...register("phonenumber")} />
+        <label htmlFor="phone">Numéro de téléphone : </label>
+        <input id="phone" type="text" {...register("phone")} />
       </div>
       <div>
         <label htmlFor="country">Pays : </label>
         <select
           name="choixPays"
-          id="pays"
+          id="country"
           className="selection"
-          {...register("pays")}
+          {...register("country")}
         >
           <option className="option" value="">
             Choisissez...
           </option>
-          <option value="france">France</option>
-          <option value="italie">Italie</option>
-          <option value="espagne">Espagne</option>
-          <option value="portugal">Portugal</option>
-          <option value="suisse">Suisse</option>
+          <option value="France">France</option>
+          <option value="Italie">Italie</option>
+          <option value="Pays-Bas">Pays-Bas</option>
+          <option value="Belgique">Belgique</option>
+          <option value="Allemagne">Allemagne</option>
         </select>
       </div>
 

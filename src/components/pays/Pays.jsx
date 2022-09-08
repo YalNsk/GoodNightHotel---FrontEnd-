@@ -4,20 +4,17 @@ import Card from "../Card/Card";
 
 const Pays = () => {
   const [data, setdata] = useState([]);
-  const [selectedRadio, setselectedRadio] = useState(0);
+  const [selectedRadio, setselectedRadio] = useState();
 
-  const radios = ["Italie", "France", "Espagne", "Portugal", "Suisse"];
+  const radios = ["Pays-Bas", "Belgique", "Allemagne", "Italie", "France"];
   console.log(selectedRadio);
 
-  //   const url = "https://api.thecatapi.com/v1/images/search?limit=9";
   const url = "http://localhost:8580/api/hotel/";
 
   //   appel à l'api
   useEffect(() => {
     axios.get(url).then((res) => setdata(res.data));
   }, []);
-
-  console.log(data[0]);
 
   return (
     <div className="lesPays">
@@ -36,18 +33,21 @@ const Pays = () => {
         ))}
       </ul>
 
-      <ul className="containerChats">
+      {selectedRadio && (
+        <button className="allPays" onClick={() => setselectedRadio("")}>
+          Voir tous les pays
+        </button>
+      )}
+
+      <ul className="containerHotel">
         {data
-          //   .filter((element) => element.pays[0].includes(selectedRadio))
+          .filter((element) => element.adresse.country.includes(selectedRadio))
           .map((element, index) => (
             <>
-              <Card />
-              <h2>{element.adresse.country}</h2>
-              <p>{element.name}</p>
+              <Card key={index} element={element} />
             </>
           ))}
       </ul>
-      <div className="container-Card">{/* <Card /> */}</div>
     </div>
   );
 };

@@ -33,20 +33,15 @@
         margin-left: 5px;
         cursor: pointer;
         color: $white;
-        font-family: $RobotoBlack;
-        font-size: 1.2rem;
+        font-family: $RobotoMedium;
+        font-size: 1.1rem;
       }
     }
   }
 }
-
-.containerChats {
-  display: grid;
+.containerHotel {
+  display: flex;
   justify-content: center;
-  grid-template-columns: 300px 300px 300px;
-  gap: 15px;
-}
-.pictureChat {
-  width: 100%;
-  background-size: contain;
+  margin: 50px auto;
+  width: 90%;
 }

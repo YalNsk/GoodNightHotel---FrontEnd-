@@ -7,14 +7,11 @@ const Search = (props) => {
   return (
     <div>
       <Nav />
-      <h1>choicePays</h1>
-      <br />
       <h2>Choisissez votre destination</h2>
       <Pays />
+      {/* <h2>Affinez votre choix</h2>
       <br />
-      <h2>Affinez votre choix</h2>
-      <br />
-      <CriteresRecherche />
+      <CriteresRecherche /> */}
     </div>
   );
 };

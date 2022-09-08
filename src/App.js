@@ -5,19 +5,23 @@ import Admin from "./pages/admin/Admin";
 import Home from "./pages/home/Home";
 import Search from "./pages/search/Search.jsx";
 import LoginRegister from "./pages/connexion-inscription/LoginRegister";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/loginRegister" element={<LoginRegister />} />
-        <Route path="/reservation" element={<Reservation />} />
-        <Route path="/*" element={<Home />} />
-        <Route path="/search" element={<Search />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/loginRegister" element={<LoginRegister />} />
+          <Route path="/reservation" element={<Reservation />} />
+          <Route path="/*" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

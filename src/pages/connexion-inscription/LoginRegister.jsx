@@ -5,8 +5,8 @@ import Nav from "../../components/navigation/Nav";
 const LoginRegister = () => {
   return (
     <div>
-      <Nav cla/>
-      <h2>Inscription</h2>
+      <Nav cla />
+      <h2>S'inscrire / Se connecter</h2>
       <FormRegister />
     </div>
   );
