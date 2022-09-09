@@ -19,7 +19,7 @@ const Nav = () => {
 
         <NavLink
           className={(nav) => (nav.isActive ? "active" : "")}
-          to="/loginRegister"
+          to="/login"
         >
           <li>Se connecter</li>
         </NavLink>

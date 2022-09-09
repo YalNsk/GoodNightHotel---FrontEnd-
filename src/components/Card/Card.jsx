@@ -1,9 +1,23 @@
-const Card = () => {
+import { useEffect } from "react";
+
+const Card = ({ element }) => {
   return (
-    <div className="card">
-      <img src="" alt="" />
-      <h3>Nom de l'hôtel</h3>
-    </div>
+    <li className="card">
+      <img src={element.img} alt="pays" />
+      <div className="containerTxt">
+        <h3 className="nomHotel">{element.name}</h3>
+        <h5 className="slogan">{element.slogan}</h5>
+        <p className="descr">{element.description}</p>
+      </div>
+      <button className="voirChambres">Voir les chambres</button>
+      <div className="containerAdress">
+        <h5>
+          {element.adresse.street} {element.adresse.num}
+        </h5>
+        <h5>{element.tel}</h5>
+        <h5>{element.email}</h5>
+      </div>
+    </li>
   );
 };
 

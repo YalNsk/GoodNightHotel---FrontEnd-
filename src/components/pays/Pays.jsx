@@ -1,17 +1,20 @@
-import { useState } from "react";
-// import axios from "axios";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Card from "../Card/Card";
 
 const Pays = () => {
-  //   const [data, setdata] = useState([]);
+  const [data, setdata] = useState([]);
   const [selectedRadio, setselectedRadio] = useState();
 
-  const radios = ["Italie", "France", "Espagne", "Portugal", "Suisse"];
+  const radios = ["Pays-Bas", "Belgique", "Allemagne", "Italie", "France"];
   console.log(selectedRadio);
 
-  //appel à l'api
-  //   useEffect(() => {
-  //     axios.get("").then((res) => setdata(res.data));
-  //   }, []);
+  const url = "http://localhost:8580/api/hotel/";
+
+  //   appel à l'api
+  useEffect(() => {
+    axios.get(url).then((res) => setdata(res.data));
+  }, []);
 
   return (
     <div className="lesPays">
@@ -25,19 +28,28 @@ const Pays = () => {
               checked={pays === selectedRadio}
               onChange={(e) => setselectedRadio(e.target.id)}
             />
-            <label htmlFor={pays}>{pays}</label>
+            <label className="labelPays" htmlFor={pays}>
+              {pays}
+            </label>
           </li>
         ))}
       </ul>
 
-      {/* <ul>
+      {selectedRadio && (
+        <button className="allPays" onClick={() => setselectedRadio("")}>
+          Voir tous les pays
+        </button>
+      )}
+
+      <ul className="containerHotel">
         {data
-          .filter((element) => element.pays[0].includes(selectedRadio))
-          .map((pays, index) => (
-            <Card key={index} pays={pays} />
+          .filter((element) => element.adresse.country.includes(selectedRadio))
+          .map((element, index) => (
+            <>
+              <Card key={index} element={element} />
+            </>
           ))}
-      </ul> */}
-      <div className="container-Card">{/* <Card /> */}</div>
+      </ul>
     </div>
   );
 };

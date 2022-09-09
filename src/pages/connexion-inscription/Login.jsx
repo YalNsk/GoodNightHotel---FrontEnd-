@@ -1,15 +1,15 @@
 import React from "react";
-import FormRegister from "../../components/formRegister/FormRegister";
+import Formlogin from "../../components/formLogin/formLogin"; 
 import Nav from "../../components/navigation/Nav";
 
-const LoginRegister = () => {
+const Login = () => {
   return (
     <div>
       <Nav cla />
       <h2>S'inscrire / Se connecter</h2>
-      <FormRegister />
+      <Formlogin />
     </div>
   );
 };
 
-export default LoginRegister;
+export default Login;

@@ -1,49 +1,41 @@
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  align-items: center;
+  background-color: $color3;
+  border-radius: 5px;
+  height: 75vh;
 
-    
-        .form {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 50%;
-        align-items: center;
-        background-color: $color3 ;
-        border-radius: 5px;
-        height: 75vh;
-        
-        div {
-            width : 50%;
-            margin: 1rem;
-        }
+  div {
+    width: 60%;
+    margin: 1rem;
+  }
 
-        button {
-            margin-top: 1rem;
-            width: 200px;
-            
-        }
+  button {
+    margin-top: 1rem;
+    width: 200px;
+  }
 
-        select {
-            margin : 1rem;
-            padding: 1rem;
-            border: none;
-            width: 400px;
-            border-radius: 5px;
-        }
+  select {
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    width: 400px;
+    border-radius: 5px;
+  }
 
-        input {
-            border: none;
-            width: 400px;
-            height: 2rem;
-            margin-top: 0.5rem;
-        }
+  input {
+    border: none;
+    width: 400px;
+    height: 2rem;
+    margin-top: 0.5rem;
+  }
 
-        .inputs {
-            display: flex;
-            flex-direction: column;
-        }
-
-
-            
-    }
-
-
+  .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+}
