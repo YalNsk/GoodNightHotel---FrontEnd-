@@ -8,6 +8,7 @@ const Card = ({ element }) => {
         <h3 className="nomHotel">{element.name}</h3>
         <h5 className="slogan">{element.slogan}</h5>
         <p className="descr">{element.description}</p>
+        <p className="price">à.p.d 75€/Nuit</p>
       </div>
       <button className="voirChambres">Voir les chambres</button>
       <div className="containerAdress">
