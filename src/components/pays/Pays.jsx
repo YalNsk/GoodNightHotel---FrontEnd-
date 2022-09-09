@@ -28,7 +28,9 @@ const Pays = () => {
               checked={pays === selectedRadio}
               onChange={(e) => setselectedRadio(e.target.id)}
             />
-            <label htmlFor={pays}>{pays}</label>
+            <label className="labelPays" htmlFor={pays}>
+              {pays}
+            </label>
           </li>
         ))}
       </ul>

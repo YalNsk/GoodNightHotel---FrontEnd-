@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const Card = ({ element }) => {
   return (
     <li className="card">
