@@ -7,6 +7,7 @@ import Search from "./pages/search/Search.jsx";
 import LoginRegister from "./pages/connexion-inscription/LoginRegister";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Login from "./pages/connexion-inscription/Login";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/*" element={<Home />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </Provider>

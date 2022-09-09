@@ -9,7 +9,6 @@ const FormRegister = () => {
     handleSubmit,
     register,
     formState: { errors },
-    reset,
   } = useForm();
 
   const dispatch = useDispatch();
@@ -28,7 +27,6 @@ const FormRegister = () => {
   const onSubmit = (data) => {
     dispatch(registerUser(data));
     console.log(data);
-    reset();
   };
 
   return (
